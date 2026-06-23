@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yifan Chen - Academic Homepage</title>
+    <meta
+      name="description"
+      content="Academic homepage for Yifan Chen, including biography, research, and photography."
+    />
+    <meta property="og:title" content="Yifan Chen - Academic Homepage" />
+    <meta
+      property="og:description"
+      content="Biography, research, and photography."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <nav class="top-nav top-nav-left" aria-label="Section navigation">
+        <a href="#bio">Bio</a>
+        <a href="#research">Research</a>
+        <a href="#photography">Photography</a>
+      </nav>
+      <a class="site-title" href="#top" aria-label="Yifan Chen homepage">
+        Yifan Chen
+      </a>
+    </header>
+
+    <main id="top">
+      <div class="hero" aria-labelledby="hero-name">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+
+        <div class="hero-stage">
+          <div class="hero-buttons hero-buttons-left">
+            <a class="hero-button" href="#bio">Bio</a>
+            <a class="hero-button" href="#research">Research</a>
+          </div>
+
+          <figure class="hero-portrait">
+            <img
+              src="assets/20260623145636_323_2.jpg"
+              alt="Selected homepage photo for Yifan Chen"
+            />
+          </figure>
+
+          <div class="hero-buttons hero-buttons-right">
+            <a class="hero-button" href="#photography">Photography</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="page-section bio-section" id="bio">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Bio</p>
+            <h2>About</h2>
+          </div>
+          <div class="section-body">
+            <div class="bio-grid">
+              <article class="bio-block">
+                <h3>Education</h3>
+                <ul>
+                  <li>
+                    University of International Business and Economics, B.A. in
+                    Economics, Beijing, China, 2018-2022
+                  </li>
+                  <li>
+                    The Graduate Institute, Geneva, M.A. in International
+                    Economics, Geneva, Switzerland, 2022-2024
+                  </li>
+                  <li>
+                    NUS Business School, Ph.D. in Real Estate, Singapore,
+                    2024-present. Advisor: Sumit Agarwal
+                  </li>
+                </ul>
+              </article>
+              <article class="bio-block">
+                <h3>Research Interests</h3>
+                <p>Environmental Economics; Urban Economics</p>
+              </article>
+              <article class="bio-block">
+                <h3>Contact</h3>
+                <p>
+                  <a href="mailto:e1374446@u.nus.edu">e1374446@u.nus.edu</a>
+                </p>
+                <p>Mochtar Riady Building, 15 Kent Ridge Dr, Singapore 119245</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section research-section" id="research">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Research</p>
+            <h2 class="compact-title">Working Papers</h2>
+          </div>
+          <div class="paper-list">
+            <article class="working-paper">
+              <span>01</span>
+              <h3>Buzzworthy Solutions: Dengue Control and Energy Consumption</h3>
+              <p>
+                Sumit Agarwal, Yifan Chen, Mingxuan Fan, Yu Qin, Akshar Saxena
+              </p>
+              <a
+                href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5386711"
+                target="_blank"
+                rel="noreferrer"
+              >
+                SSRN
+              </a>
+            </article>
+            <article class="working-paper">
+              <span>02</span>
+              <h3>Large Data Centers Generate Localized Warming</h3>
+              <p>
+                Yifan Chen, Liu Ee Chia, Mingxuan Fan, Qiang Wang
+              </p>
+            </article>
+            <article class="working-paper">
+              <span>03</span>
+              <h3>Eyes Off the Smoke: Monitoring Failure and Strategic Emissions</h3>
+              <p>
+                Sumit Agarwal, Yifan Chen, Shiqi Guo, Mengdi Liu
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="photography-section" id="photography" aria-labelledby="photography-title">
+        <div class="photography-copy">
+          <p class="eyebrow">Photography</p>
+          <h2 id="photography-title">Selected Frames</h2>
+          <p>
+            This section randomly displays ten photographs from my works.
+          </p>
+        </div>
+        <div
+          class="photo-gallery"
+          data-random-gallery
+          aria-label="Random photography selection"
+        ></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; 2026 Yifan Chen</span>
+      <a href="#top">Back to top</a>
+    </footer>
+    <script>
+      const photoPool = [
+        "assets/20260623144709_303_2.jpg",
+        "assets/20260623144712_304_2.jpg",
+        "assets/20260623144715_305_2.jpg",
+        "assets/20260623144718_306_2.jpg",
+        "assets/20260623144727_309_2.jpg",
+        "assets/20260623144909_312_2.jpg",
+        "assets/20260623145623_314_2.jpg",
+        "assets/20260623145623_314_2_wechat.jpg",
+        "assets/20260623145625_315_2.jpg",
+        "assets/20260623145625_315_2_wechat.jpg",
+        "assets/20260623145626_316_2.jpg",
+        "assets/20260623145627_317_2.jpg",
+        "assets/20260623145628_318_2.jpg",
+        "assets/20260623145630_319_2.jpg",
+        "assets/20260623145631_320_2.jpg",
+        "assets/20260623145632_321_2.jpg",
+        "assets/20260623145633_322_2.jpg",
+        "assets/20260623145636_323_2.jpg",
+        "assets/20260623145638_324_2.jpg",
+        "assets/20260623145640_325_2.jpg",
+        "assets/20260623145642_326_2.jpg",
+        "assets/20260623145644_327_2.jpg",
+        "assets/20260623145739_328_2.jpg",
+        "assets/20260623145741_329_2.jpg",
+        "assets/20260623145743_330_2.jpg",
+        "assets/20260623150122_332_2.jpg",
+        "assets/20260623150124_333_2.jpg"
+      ];
+
+      function shuffled(items) {
+        const copy = [...items];
+        for (let index = copy.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+        }
+        return copy;
+      }
+
+      const gallery = document.querySelector("[data-random-gallery]");
+
+      if (gallery) {
+        shuffled(photoPool)
+          .slice(0, 10)
+          .forEach((src, index) => {
+            const figure = document.createElement("figure");
+            const image = document.createElement("img");
+            figure.className = "photo-tile";
+            image.src = src;
+            image.alt = `Photography selection ${index + 1}`;
+            image.loading = "lazy";
+            figure.append(image);
+            gallery.append(figure);
+          });
+      }
+    </script>
+  </body>
+</html>
