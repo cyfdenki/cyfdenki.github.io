@@ -65,11 +65,12 @@
                 <ul>
                   <li>
                     University of International Business and Economics, B.A. in
-                    Economics, Beijing, China, 2018-2022
+                    Economics, Beijing, China, 2018-2022. Advisor: Mengdi Liu
                   </li>
                   <li>
                     The Graduate Institute, Geneva, M.A. in International
-                    Economics, Geneva, Switzerland, 2022-2024
+                    Economics, Geneva, Switzerland, 2022-2024. Advisors:
+                    Jo&euml;lle Noailly, Yuan Zi
                   </li>
                   <li>
                     NUS Business School, Ph.D. in Real Estate, Singapore,
@@ -161,9 +162,7 @@
         "assets/20260623144727_309_2.jpg",
         "assets/20260623144909_312_2.jpg",
         "assets/20260623145623_314_2.jpg",
-        "assets/20260623145623_314_2_wechat.jpg",
         "assets/20260623145625_315_2.jpg",
-        "assets/20260623145625_315_2_wechat.jpg",
         "assets/20260623145626_316_2.jpg",
         "assets/20260623145627_317_2.jpg",
         "assets/20260623145628_318_2.jpg",
@@ -195,18 +194,35 @@
       const gallery = document.querySelector("[data-random-gallery]");
 
       if (gallery) {
-        shuffled(photoPool)
-          .slice(0, 10)
-          .forEach((src, index) => {
-            const figure = document.createElement("figure");
-            const image = document.createElement("img");
-            figure.className = "photo-tile";
-            image.src = src;
-            image.alt = `Photography selection ${index + 1}`;
-            image.loading = "lazy";
-            figure.append(image);
-            gallery.append(figure);
+        const candidates = shuffled(photoPool);
+        const targetCount = Math.min(10, candidates.length);
+        let cursor = 0;
+
+        function addPhotoTile() {
+          if (gallery.children.length >= targetCount || cursor >= candidates.length) {
+            return;
+          }
+
+          const src = candidates[cursor];
+          cursor += 1;
+
+          const figure = document.createElement("figure");
+          const image = document.createElement("img");
+          figure.className = "photo-tile";
+          image.src = src;
+          image.alt = `Photography selection ${gallery.children.length + 1}`;
+          image.loading = "lazy";
+          image.addEventListener("error", () => {
+            figure.remove();
+            addPhotoTile();
           });
+          figure.append(image);
+          gallery.append(figure);
+        }
+
+        for (let index = 0; index < targetCount; index += 1) {
+          addPhotoTile();
+        }
       }
     </script>
   </body>
